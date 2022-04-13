@@ -4,7 +4,6 @@ import NavigationBar from "./NavigationBar";
 import {Button, Card, Container, Spinner} from "react-bootstrap";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faAdd} from '@fortawesome/free-solid-svg-icons'
-import NewTaskScreen from "./NewTaskScreen";
 import moment from "moment";
 
 class TaskHomepage extends Component {
@@ -28,7 +27,7 @@ class TaskHomepage extends Component {
 
     async fetchTasks() {
         let data = JSON.parse(localStorage.getItem("user")).data;
-        let resp = await fetch("http://127.0.0.1:8080/api/tasks/view/tasks", {
+        let resp = await fetch("http://172.16.40.10:8080/api/tasks/view/tasks", {
             headers: {
                 Authorization: "Bearer " + data.token
             }

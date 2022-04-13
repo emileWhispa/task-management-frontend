@@ -60,7 +60,7 @@ class TaskDetailScreen extends Component{
                                 <div>{this.props.history.location.state.data.attachments.map((e,index) => (
                                     <button onClick={event => {
                                         event.preventDefault();
-                                        window.location.href = 'http://127.0.0.1:8080/api/download/attachment/'+e.id;
+                                        window.location.href = 'http://172.16.40.10:8080/api/download/attachment/'+e.id;
                                     }} key={index} className={'py-1 px-2 border rounded-3 me-1 mt-1 d-inline-flex'}
                                     style={{fontSize: 12}}><FontAwesomeIcon icon={faDownload}/> <span className={'ms-1'}>Download</span>
                                     </button>))}</div>

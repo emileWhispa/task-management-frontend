@@ -28,7 +28,7 @@ class App extends Component{
     });
 
     let data = new FormData(form);
-    let res = await fetch('http://127.0.0.1:8080/api/auth/sign-in', {
+    let res = await fetch('http://172.16.40.10:8080/api/auth/sign-in', {
       method: "POST",
       headers: {
         'Accept': 'application/json',

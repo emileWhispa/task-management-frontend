@@ -48,7 +48,7 @@ class NewTaskScreen extends Component {
 
     async fetchProjects() {
         let data = JSON.parse(localStorage.getItem("user")).data;
-        let resp = await fetch("http://127.0.0.1:8080/api/tasks/get/values", {
+        let resp = await fetch("http://172.16.40.10:8080/api/tasks/get/values", {
             headers: {
                 Authorization: "Bearer " + data.token
             }
@@ -88,7 +88,7 @@ class NewTaskScreen extends Component {
         this.setState({
             loading: true
         });
-        let res = await fetch('http://127.0.0.1:8080/api/tasks/action/create', {
+        let res = await fetch('http://172.16.40.10:8080/api/tasks/action/create', {
             method: "POST",
             headers: {
                 Authorization: "Bearer " + user.token
