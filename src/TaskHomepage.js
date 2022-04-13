@@ -93,7 +93,7 @@ class TaskHomepage extends Component {
                                 <a onClick={(ev) => {
                                 ev.preventDefault();
                                 this.props.history.push('task/details', {data: e});
-                            }} href="#" className={'btn btn-info btn-sm'}>Details</a></td>
+                            }} href="#" className={'btn btn-primary btn-sm'}>Details</a></td>
                         </tr>))}
                         </tbody>
                     </table>

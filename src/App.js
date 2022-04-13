@@ -80,14 +80,14 @@ class App extends Component{
           }
           <div className={'row align-items-center justify-content-center'}>
             <div className={'col-md-4'}>
-              <Card className={'p-3 mt-5 shadow-sm'}>
+              <Card className={'p-3 mt-5 shadow-sm'} style={{backgroundColor:"#f4f8fd"}}>
                 <Form style={{textAlign:"left"}} onSubmit={(e)=>{
                   e.preventDefault();
                   this.loginAction(e.currentTarget);
                 }}>
                   <h1>Administrator Login</h1>
                   <h6 className={'text-muted'}>Enter your sign in credentials</h6>
-                  <Form.Group className="mb-3 mt-5" controlId="formBasicEmail">
+                  <Form.Group className="mb-3 mt-5 pt-3" controlId="formBasicEmail">
                     <Form.Label>Username <span className={'text-danger'}>*</span></Form.Label>
                     <Form.Control type="text" placeholder="Enter username" name={'username'} required={'required'}/>
                     <Form.Text className="text-muted">
@@ -102,7 +102,7 @@ class App extends Component{
                       Password is required.
                     </Form.Text>
                   </Form.Group>
-                  <div className={'clearfix mt-5'}>
+                  <div className={'clearfix mt-5 pt-3'}>
                     <div className={'float-end'}>{this.state.loading ? <Spinner animation="border" /> : <Button variant="primary" type="submit" className={'mt-2'}>
                       Sign In
                     </Button>}</div>

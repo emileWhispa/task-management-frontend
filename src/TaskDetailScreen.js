@@ -59,6 +59,7 @@ class TaskDetailScreen extends Component{
                                 <span className={'fw-bold'}>Attachments</span>
                                 <div>{this.props.history.location.state.data.attachments.map((e,index) => (
                                     <button onClick={event => {
+                                        //Prevent default behaviors for button
                                         event.preventDefault();
                                         window.location.href = 'http://172.16.40.10:8080/api/download/attachment/'+e.id;
                                     }} key={index} className={'py-1 px-2 border rounded-3 me-1 mt-1 d-inline-flex'}

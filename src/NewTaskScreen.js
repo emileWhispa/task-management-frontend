@@ -415,7 +415,7 @@ class NewTaskScreen extends Component {
                             </Button>
                         </div>
                         <div>
-                            <Button type={'button'} variant="outline-primary" size={'sm'} onClick={() => this.handleClose()}>
+                            <Button type={'button'} variant="outline-secondary" size={'sm'} onClick={() => this.handleClose()}>
                                 Cancel
                             </Button>
                             {this.state.loading ? <div className={'ms-1'}>
