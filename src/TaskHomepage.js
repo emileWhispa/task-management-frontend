@@ -18,6 +18,7 @@ class TaskHomepage extends Component {
     }
 
     componentDidMount() {
+        //Check if user exists in local storage
         if(this.state.loggedIn) {
             this.fetchTasks();
         }else{
@@ -38,6 +39,7 @@ class TaskHomepage extends Component {
                 tasks: data1,
             })
         } else if (resp.status === 401) {
+            //Force user to re-login after unauthorized response from the server
             localStorage.removeItem("user");
             this.props.history.push('/login');
         }

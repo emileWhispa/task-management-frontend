@@ -60,11 +60,13 @@ class NewTaskScreen extends Component {
                 assignees: data1.assignees,
             })
         } else if (resp.status === 401) {
+            //Force user to re-login after unauthorized response from the server
             localStorage.removeItem("user");
             this.props.history.push('/login');
         }
     }
 
+    //Navigate back to the previous screen
     handleClose() {
         this.props.history.goBack();
     }
